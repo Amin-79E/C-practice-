@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int string_compare(char *s1, char *s2)
+{
+    while(*s1 == *s2 )
+    {
+        if(*s1 == '\0')
+        {
+          return 0;
+        }
+
+        s1++;
+        s2++;
+    }
+
+    return *s1 - *s2;
+}
+
+int main(void)
+{
+    printf("This program will tell you which string comes first alphabetically.\n");
+    char s1[215];
+    printf("Enter the first string(must be o longer than a line:\n");
+    fgets(s1, sizeof(s1), stdin);
+
+    char s2[215];
+    printf("Enter the second string(it must be also no more tha oe line):\n");
+    fgets(s2, sizeof(s2), stdin);
+
+    int result = string_compare(s1, s2);
+
+    if(result == 0)
+    {
+        printf("String are equal, copies of each other.");
+    }
+    else if(result > 0)
+    {
+        printf("The first string comes first alphabetically.");
+    }
+    else
+    {
+        printf("The second string comes first alphabetically.");
+    }
+
+    return 0;
+}
+    
