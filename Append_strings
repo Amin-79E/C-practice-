@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+
+void string_append(char *dst, char *str)
+{
+  while(*dst != '\0')
+  {
+    dst++;
+  }
+  strcpy(dst,str);
+}
+
+int main(void)
+{
+    char dst[430];
+    printf("Enter the first string, the one oe you want to add to it: ");
+    fgets(dst, sizeof(dst), stdin);
+    int len = strlen(dst);
+    if(len > 0 && dst[len - 1] == '\n')
+    {
+        dst[len - 1] = '\0';
+    }
+
+    char str[215];
+    printf("Enter the string you want to ad to the first string: ");
+    fgets(str, sizeof(str), stdin);
+
+    string_append(dst,str);
+
+    printf("Here is the final stirng: %s",dst);
+}
