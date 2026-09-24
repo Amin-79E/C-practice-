@@ -29,8 +29,8 @@ int get_GCD(int a ,int b)
 
 int main(void)
 {
-  int a;
-  int b;
+  int a =0 ;
+  int b =0 ;
 
   do{
     printf("Enter any two non-zero integers to get the GCD between them.\n");
@@ -56,9 +56,9 @@ int main(void)
   int gcd = get_GCD(a,b);
   int lcm = get_LCM(a,b,gcd);
 
-  printf("The gcd of %d and %d is: %d",a,b,gcd);
+  printf("The gcd of %d and %d is: %d",a ,b ,gcd);
   
-  printf("The LCM of %d and %d is: %d",a,b,lcm);
+  printf("The LCM of %d and %d is: %d",a ,b ,lcm);
 
   return 0;
 }
