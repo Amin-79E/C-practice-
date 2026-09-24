@@ -6,7 +6,7 @@ int string_compare(char *s1, char *s2)
     {
         if(*s1 == '\0')
         {
-          return 0;
+          return 0;// in case s1 is empty then they are both.
         }
 
         s1++;
