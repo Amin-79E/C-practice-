@@ -4,10 +4,10 @@
 
 int main(void)
 {
-    double radius= 0.0;
+    double radius = 0.0;
     double area = 0.0;
     double serf_area = 0.00;
-    double volume= 0.0;
+    double volume = 0.0;
 
     printf("Enter the radius of the circle: ");
     do{
@@ -20,9 +20,9 @@ int main(void)
 
     area = PI * pow(radius, 2);
     serf_area = 4 * area;
-    volume = 3/4 * PI *pow(Radius, 3);
+    volume = 3/4 * PI *pow(radius, 3);
 
-    printf("The area of the circle is: %.2lf , and the surface ara of the curface is: %.2lf ,the volume Is: %.2lf\n", area, serf_area, volume);
+    printf("The area of the circle is: %.2lf, and the surface ara of the curface is: %.2lf, the volume is: %.2lf\n", area, serf_area, volume);
 
     return 0;
 }
