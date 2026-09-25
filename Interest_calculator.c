@@ -4,7 +4,7 @@
 int main(void)
 {
     double principal = 0.0;
-    double rate = 0.0;
+    double rate = 0.0; // can be negative in certain cases.
     int years =0;
     int times=0 ;
     double total = 0.0;
