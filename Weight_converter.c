@@ -27,7 +27,7 @@ int main(void)
         if(weight < 0){
             printf("Invalid input, try again:");
         }
-    }while(weight <0) ;
+    }while(weight <0) ;// next i will try to force an integer input.
 
     if(weight == 0)
     {
