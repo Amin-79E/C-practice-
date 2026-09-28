@@ -8,8 +8,11 @@ int main(void)
     bool capitalize = true;
 
     printf("Enter Any text to fix the capitalization of \n");
-    fgets(text ,sizeof(text) ,stdin);
-
+    if(fgets(text ,sizeof(text) ,stdin) == NULL )
+    {
+        return 1;
+    }
+    
     int i= 0;
     while(text[i] != '\0')
     {
