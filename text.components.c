@@ -6,12 +6,12 @@ int main(void)
     char  text[300] = {};
     int letter_count =0;
     int digit_count =0;
-    int space_count =0;
+    int space_count =-1;
     int punct_count =0;
 
 
     printf("Enter Any text to get the count of: digits, letters, spaces, and punctuations in it \n");
-    fgets(text ,sizeof(text) ,stdin);
+    fgets(text ,sizeof(text) ,stdin); //fgets picks the new line character.
 
     int i=0;
     while(text[i] != '\0')
