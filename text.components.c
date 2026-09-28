@@ -13,7 +13,7 @@ int main(void)
     printf("Enter Any text to get the count of: digits, letters, spaces, and punctuations in it \n");
     if(fgets(text ,sizeof(text) ,stdin) == NULL)
     {
-        retrun 1;//fgets picks the new line character.
+        return 1;//fgets picks the new line character.
     }
     
     int i=0;
