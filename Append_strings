@@ -28,4 +28,6 @@ int main(void)
     string_append(dst,str);
 
     printf("Here is the final stirng: %s",dst);
+
+    return 0;
 }
