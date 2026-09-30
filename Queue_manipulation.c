@@ -27,7 +27,7 @@ void enqueue(Queue *q, int k)
         return;
     }
     n->data = k; //the value of data.
-    n->next = NULL; //new node is last.
+    n->next = NULL; //new node is last
 
     if(empty(q))
     {
