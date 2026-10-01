@@ -6,14 +6,14 @@ int main(void)
    double a;
    double b;
    double c;
-   double s1;
-   double s2;
+   double x1;
+   double x2;
 
    printf("To solve a quadratic equation, form: ax^2 + bx + c\n");
    printf("Enter the value of a: ");
-   if(scanf("%f", &a) != 1)
+   if(scanf("%lf", &a) != 1)
    {
-      printf("invalid input");
+      printf("Invalid input\n");
       return 1;
    }
    
@@ -24,16 +24,16 @@ int main(void)
    }
 
    printf("Enter the value of b: ");
-   if(scanf("%f", &b) != 1)
+   if(scanf("%lf", &b) != 1)
    {
-      printf("Invalid input");
+      printf("Invalid input\n");
       return 1;
    }
 
    printf("Enter the value of c: ");
-   if(scanf("%f", &c) != 1)
+   if(scanf("%lf", &c) != 1)
    {
-      printf("Invalid input");
+      printf("Invalid input\n");
       return 1;
    }
    
@@ -42,20 +42,22 @@ int main(void)
    if(delta > 0)
    {
     double sqr = sqrt(delta);
-    s1 = (-b+sqr) / (a*2);
-    s2 = (-b-sqr) / (a*2);
+    x1 = (-b+sqr) / (a*2);
+    x2 = (-b-sqr) / (a*2);
 
-    printf("The roots (solutions of the equation) are: %f and %f\n",s1 ,s2);
+    printf("The roots (solutions of the equation) are: x1 =  %.2f and x2 = %.2f\n",x1 ,x2);
    }
    else if(delta ==0)
    {
-    printf("The solution for the equation is: %f\n", (-b)/(a*2));
+    printf("The solution for the equation is: x = %.2f\n", (-b)/(a*2));
    }
    else
    {
-    double r = -b / (2*a);
+    double r = -b / (a*2);
     double i = sqrt(-delta) / (a*2);
-    printf("The solutions for the equation: %f and %f \n",r, i );
+
+    printf("x1 = %.2lf + %.2lfi\n", r, i);
+    printf("x2 = %.2lf - %.2lfi\n", r, i);
    }
 
    return 0;
