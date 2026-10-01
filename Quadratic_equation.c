@@ -3,15 +3,20 @@
 
 int main(void)
 {
-   float a;
-   float b;
-   float c;
-   float s1;
-   float s2;
+   double a;
+   double b;
+   double c;
+   double s1;
+   double s2;
 
    printf("To solve a quadratic equation, form: ax^2 + bx + c\n");
    printf("Enter the value of a: ");
-   scanf("%f", &a);
+   if(scanf("%f", &a) != 1)
+   {
+      printf("invalid input");
+      return 1;
+   }
+   
    if(a == 0)
    {
     printf("Not a quadratic equation.\n");
@@ -24,11 +29,11 @@ int main(void)
    printf("Enter the value of c: ");
    scanf("%f", &c);
 
-   float delta = pow(b, 2) - 4*a*c; // the formula for delta;
+   double delta = pow(b, 2) - 4*a*c; // the formula for delta;
 
    if(delta > 0)
    {
-    float sqr = sqrt(delta);
+    double sqr = sqrt(delta);
     s1 = (-b+sqr) / (a*2);
     s2 = (-b-sqr) / (a*2);
 
@@ -40,8 +45,8 @@ int main(void)
    }
    else
    {
-    float r = -b / (2*a);
-    float i = sqrt(-delta) / (a*2);
+    double r = -b / (2*a);
+    double i = sqrt(-delta) / (a*2);
     printf("The solutions for the equation: %f and %f \n",r, i );
    }
 
