@@ -6,7 +6,7 @@ int main(void)
     char  text[300] = {};
     int letter_count =0;
     int digit_count =0;
-    int space_count =-1;
+    int space_count =-1; //the fgets picksup the new line char.
     int punct_count =0;
 
 
