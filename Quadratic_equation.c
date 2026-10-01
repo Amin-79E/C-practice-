@@ -24,11 +24,19 @@ int main(void)
    }
 
    printf("Enter the value of b: ");
-   scanf("%f", &b);
+   if(scanf("%f", &b) != 1)
+   {
+      printf("Invalid input");
+      return 1;
+   }
 
    printf("Enter the value of c: ");
-   scanf("%f", &c);
-
+   if(scanf("%f", &c) != 1)
+   {
+      printf("Invalid input");
+      return 1;
+   }
+   
    double delta = pow(b, 2) - 4*a*c; // the formula for delta;
 
    if(delta > 0)
