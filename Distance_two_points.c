@@ -24,7 +24,7 @@ int main(void)
 
     d = sqrt(pow((x2 - x1), 2) + pow((y2 - y1),2));
 
-    printf("The distance between the two points you given is: %.2f\n", d);
+    printf("The distance between the given two points is: %.2f\n", d);
 
     return 0;
 }
