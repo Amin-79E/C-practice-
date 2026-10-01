@@ -18,7 +18,7 @@ int main(void)
     int len = strlen(dst);
     if(len > 0 && dst[len - 1] == '\n')
     {
-        dst[len - 1] = '\0';
+        dst[len - 1] = '\0';// to remove th enew line char
     }
 
     char str[215];
