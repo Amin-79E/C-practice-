@@ -37,7 +37,7 @@ int main(void)
       return 1;
    }
    
-   double delta = pow(b, 2) - 4*a*c; // the formula for delta;
+   double delta = b*b - 4*a*c; // the formula for delta;
 
    if(delta > 0)
    {
@@ -47,7 +47,7 @@ int main(void)
 
     printf("The roots (solutions of the equation) are: x1 =  %.2f and x2 = %.2f\n",x1 ,x2);
    }
-   else if(delta ==0)
+   else if(delta == 0.0)
    {
     printf("The solution for the equation is: x = %.2f\n", (-b)/(a*2));
    }
