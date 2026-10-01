@@ -44,7 +44,7 @@ int main(void)
 
         printf("The roots are: x1 = %.2f and x2 = %.2f\n", x1, x2);
     }
-    else if (delta == 0)
+    else if (delta == 0.0)
     {
         double x = -b / (2 * a) + 0.0;
 
