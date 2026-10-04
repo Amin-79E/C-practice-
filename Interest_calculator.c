@@ -12,7 +12,7 @@ int main(void)
     printf("Compound interest calculator.\n");
     printf("Enter the principal amount: ");
     do{
-        scanf("%lf", &principal);
+        if(scanf("%lf", &principal) != 1){return 1;};
         if(principal <0)
         {
             printf("Invalid input, try again: ");
@@ -20,12 +20,12 @@ int main(void)
     }while(principal <0 );
 
     printf("Enter the rate: ");
-    scanf("%lf", &rate);
+    if(scanf("%lf", &rate) != 1){return 1;}
     rate /=100;
 
     printf("Enter the frequency, how many times per year: ");
     do{
-        scanf("%d", &times);
+        if(scanf("%d", &times) != 1){return 1;}
         if(times <=0)
         {
             printf("Invalid input, must be a positive: ");
@@ -34,7 +34,7 @@ int main(void)
 
     printf("Enter how many years: ");
     do{
-        scanf("%d", &years);
+        if(scanf("%d", &years) != 1){return 1;}
         if(years<=0)
         {
             printf("Invalid input, try again: ");
