@@ -24,32 +24,16 @@ bool is_prime(int x)
 
 int prime_factor(int n ,int factors[])
 {
-    int i=2;
     int j=0;
-
-    while( n != 1)
+    for (int i = 2; i <= n; )
     {
-      while(i <= n)
-      {
-        if(is_prime(i) == true)
+        if (n % i == 0)
         {
-          if(n % i == 0)
-          {
-            n = n/i;
-            factors[j] = i;
-            j++;
-          }
-          else
-          {
-            i++;
-          }
+            factors[j++] = i;
+            n /= i;
         }
-
         else
-        {
-          i++;
-        }
-     }
+            i++;
     }
     return j;
 }
@@ -61,7 +45,7 @@ int main(void)
 
     do
     {
-        scanf("%d",&n);
+        if(scanf("%d",&n) != 1){return 1};
 
         if(n<=0)
         {
