@@ -25,24 +25,17 @@ int main(void)
 
   do{
     printf("Enter any two non-zero integers to get the GCD between them.\n");
-    printf("Enter the first integer: ");
-    scanf("%d",&a);
+    printf("Enter the first integer the the second( x y ): ");
+    if(scanf("%d %d",&a, &b) != 2){return 1;}
     if(a<=0)
     {
-        printf("Invalid input ,try again: ");
+        printf("Invalid input for a,try again: ");
     }
-  }while(a<=0);
-
-  do{
-    printf("Enter the second integer: ");
-    scanf("%d",&b);
     if(b<=0)
     {
-        printf("Invalid input ,Try again: ");
+        printf("Invalid input for b,try again: ");
     }
-
-  }while(b<=0);
-
+  }while(a<=0 || b<=0);
 
   int gcd = get_GCD(a,b);
 
