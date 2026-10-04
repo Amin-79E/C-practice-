@@ -48,7 +48,7 @@ int main(void)
 
     do
     {
-        scanf("%d",&n);
+        if(scanf("%d",&n) != 1){return 1;}
 
         if(n<0)
         {
