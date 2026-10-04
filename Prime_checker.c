@@ -7,13 +7,11 @@ int main(void)
     int is_prime = 1; // 0 if no, 1 if yes
 
     do{
-        
         printf("Enter any non_zero positive integer to check if it's a prime number or not:\t");
-        scanf("%d",&n);
+        if(scanf("%d",&n) != 1){return 1;}
 
         if( n <=0 )
         {
-            
             printf("Invalid input ,must be a non-zero positive integer.\nTry again:\t");
         }
         // the loop can be n<=1 ,but i wanted to only check for the non-zero positive inputs.
@@ -24,7 +22,6 @@ int main(void)
         printf("1 is not a prime number.");
         return 0;
     }
-
     else
     {
         int k = (int)round(sqrt(n)); 
