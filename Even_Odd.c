@@ -7,7 +7,7 @@ int main(void)
     do{
        
        printf("Enter any number you want to check for being an odd or an even:\t");
-       scanf("%d",&n);
+       if(scanf("%d",&n) != 1){return 1;}
        
        if(n<0)
        {
