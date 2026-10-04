@@ -34,7 +34,7 @@ int main(void)
   printf("Enter any positive none-zero integer to check if it is a perfect number: ");
   do
   {
-    scanf("%d",&n);
+    if(scanf("%d",&n) != 1){return 1;}
     if(n<=0)
     {
         printf("Invalid input ,must be a non-zero positive integer.\nTry again: ");
