@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<math.h>
 
 int get_GCD(int a ,int b)
 {
@@ -24,7 +23,7 @@ int main(void)
   int b;
 
   do{
-    printf("Enter any two non-zero integers to get the GCD between them.\n");
+    printf("Enter any two stricktly positive integers to get the GCD between them.\n");
     printf("Enter the first integer the the second( x y ): ");
     if(scanf("%d %d",&a, &b) != 2){return 1;}
     if(a<=0)
