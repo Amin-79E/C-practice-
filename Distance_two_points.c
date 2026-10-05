@@ -22,7 +22,7 @@ int main(void)
         retrun 1;
     }
 
-    d = sqrt(pow((x2 - x1), 2) + pow((y2 - y1),2));
+    d = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
 
     printf("The distance between the given two points is: %.2f\n", d);
 
