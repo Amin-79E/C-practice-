@@ -25,7 +25,7 @@ int main(void)
     {
        end++;
     }
-    end--;//
+    end--;//to remove ther \0.
 
     reverse(word, end);
 
