@@ -35,7 +35,7 @@ int main(void)
   do{
     printf("Enter any two non-zero integers to get the GCD between them.\n");
     printf("Enter the first integer: ");
-    scanf("%d",&a);
+    if(scanf("%d",&a) != 1){return 1;}
     if(a<=0)
     {
         printf("Invalid input ,try again: ");
@@ -44,7 +44,7 @@ int main(void)
 
   do{
     printf("Enter the second integer: ");
-    scanf("%d",&b);
+    if(scanf("%d",&b) != 1){return 1;}
     if(b<=0)
     {
         printf("Invalid input ,Try again: ");
