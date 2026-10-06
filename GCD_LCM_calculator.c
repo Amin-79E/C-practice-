@@ -5,8 +5,7 @@ int get_LCM(int a ,int b ,int gcd)
 {
   int lcm;
   lcm = (a/gcd)*b;
-  // (a*b)/gcd; works fine but the used version avoids exceeding integer limits in large integers cases.
-
+  // (a*b)/gcd; works fine but the used version avoids exceeding integer limits in large integers cases
   return lcm;
 }
 
@@ -52,12 +51,10 @@ int main(void)
 
   }while(b<=0);
 
-
   int gcd = get_GCD(a,b);
   int lcm = get_LCM(a,b,gcd);
 
   printf("The gcd of %d and %d is: %d",a ,b ,gcd);
-  
   printf("The LCM of %d and %d is: %d",a ,b ,lcm);
 
   return 0;
