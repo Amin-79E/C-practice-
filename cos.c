@@ -22,14 +22,14 @@ double power(double x, int n)
 }
 
 
-double sin_Taylor(double x)
+double cos_Taylor(double x)
 {
     int n=0; 
-    double sum=x , prev=x , term , diff ;
+    double sum=1.0 , prev=1.0 , term , diff ;
 
     do{
         n++;
-        term = (n % 2 == 0 ? 1 : -1) * power(x, 2*n + 1) / factorial(2*n + 1);
+        term = (n % 2 == 0 ? 1 : -1) * power(x, 2*n) / factorial(2*n);
         sum += term;
         diff = fabs(fabs(term) - fabs(prev));
         prev = term;
@@ -40,19 +40,19 @@ double sin_Taylor(double x)
 
 void display(double x, double s)
 {
-    printf("The value of sin(%lf) with accuracy 10^-4 is: %.6lf\n", x, s);
+    printf("The value of cos(%lf) with accuracy 10^-4 is: %.6lf\n", x, s);
 }
 
 int main(void)
 {
     double x;
-    printf("Enter any number you want to get the sin of: ");
+    printf("Enter any number you want to get the cos of: ");
     if(scanf("%lf", &x) != 1)
     {
         return 1;
     }
 
-    double s = sin_Taylor(x);
+    double s = cos_Taylor(x);
 
     display(x, s);
 
