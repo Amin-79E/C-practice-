@@ -1,0 +1,8 @@
+void display(int T[], int i, int N)
+{
+    if (i == N) {
+        return;
+    }
+    printf("%d ", T[i]);
+    display(T, i + 1, N);
+}
