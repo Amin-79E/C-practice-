@@ -1,0 +1,7 @@
+int count_rec(int A[], int n, int x) {
+    if (n == 0)
+        return 0;
+    if (A[n-1] == x)
+        return 1 + count_rec(A, n-1, x);
+    return count_rec(A, n-1, x);
+}
