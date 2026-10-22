@@ -1,0 +1,12 @@
+int even_rec(int M[N][N], int i, int j) {
+    if (i == N)                      // all rows done
+        return 0;
+
+    int next_i = (j == N - 1) ? i + 1 : i;
+    int next_j = (j == N - 1) ? 0 : j + 1;
+
+    int r = even_rec(M, next_i, next_j);
+    return (M[i][j] % 2 == 0) ? 1 + r : r;
+}
+
+// call: even_rec(M, 0, 0);
