@@ -1,0 +1,8 @@
+int Max(int T[], int i, int N)
+{
+    if (i == N - 1) {          
+        return T[i];
+    }
+    int max = Max(T, i + 1, N);
+    return (T[i] > max) ? T[i] : max;
+}
