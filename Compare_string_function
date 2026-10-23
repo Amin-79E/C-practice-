@@ -8,11 +8,9 @@ int string_compare(char *s1, char *s2)
         {
           return 0;// in case s1 is empty then they are both.
         }
-
         s1++;
         s2++;
     }
-
     return *s1 - *s2;
 }
 
