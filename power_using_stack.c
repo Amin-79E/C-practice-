@@ -62,7 +62,6 @@ int main(void)
         printf("push %d, address = %p\n", e, (void *)&s.arr[s.top]);
     }
 
-    /* "Returns": unwind from pow(0) back to pow(exp) */
     long result = 0;
     int e;
     while (!is_empty(&s))
