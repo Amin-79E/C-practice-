@@ -22,7 +22,7 @@ int push(Stack *s, int v)
 int pop(Stack *s, int *out)
 {
     if (is_empty(s))
-        return 0;               /* underflow */
+        return 0;
     *out = s->arr[s->top--];
     return 1;
 }
