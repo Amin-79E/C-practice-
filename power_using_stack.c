@@ -52,7 +52,6 @@ int main(void)
     Stack s;
     init(&s);
 
-    /* "Calls": pow(exp), pow(exp-1), ..., pow(0) */
     for (int e = exp; e >= 0; e--)
     {
         if (!push(&s, e))
