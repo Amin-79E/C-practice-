@@ -14,7 +14,7 @@ int  is_full(const Stack *s)  { return s->top == CAPACITY - 1; }
 int push(Stack *s, int v)
 {
     if (is_full(s))
-        return 0;               /* overflow */
+        return 0; 
     s->arr[++s->top] = v;
     return 1;
 }
